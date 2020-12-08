@@ -2,7 +2,7 @@
 
 #include "Account.h"
 
-class Savings {
+class Savings : protected Account {
 public:
 	double getInterestRate();
 	void setInterestRate(double interestRate);

@@ -2,7 +2,7 @@
 #include "Account.h"
 
 
-class PremiumChecking {
+class PremiumChecking : protected Account {
 public:
 	void withdraw();
 	

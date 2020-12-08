@@ -2,10 +2,11 @@
 
 #include "Account.h"
 
-class Checking {
+class Checking : protected Account {
 public:
-	unsigned long long withdraw();
-	
+	Checking();
+	unsigned long long withdraw(unsigned long long amount);
+	virtual void display();
 private:
 
 };
