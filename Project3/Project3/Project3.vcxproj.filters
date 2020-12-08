@@ -24,7 +24,7 @@
     <ClInclude Include="Savings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Account.h">
+    <ClInclude Include="Account.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -41,7 +41,7 @@
     <ClCompile Include="Savings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Account.cpp">
+    <ClCompile Include="Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

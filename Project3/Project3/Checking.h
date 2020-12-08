@@ -1,13 +1,11 @@
 #pragma once
 
-#include <string>
+#include "Account.h"
 
 class Checking {
 public:
 	unsigned long long withdraw();
-	void firstNameSet();
-	void lastNameSet();
-	void display();
+	
 private:
 
 };
