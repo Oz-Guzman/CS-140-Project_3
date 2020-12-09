@@ -17,7 +17,7 @@ unsigned long long longRandomNumberGenerator(unsigned long long start, unsigned 
 }
 
 int main() {
-	int userInput;
+	int userInput = 0;
 
 	std::vector<std::string> firstNames;
 	firstNames.push_back("Luke");
@@ -41,35 +41,54 @@ int main() {
 
 	std::vector<Account*> vectorOfAccounts;
 
+	while (userInput != 5) {
 
-	
-	std::cout << "Menu:\n1. Create Checking accounts\n2. Create Premium accounts\n3. Create Savings accounts\n4. Display all accounts\n5. Quit" << std::endl;
-	std::cin >> userInput;
+		std::cout << "Menu:\n1. Create Checking accounts\n2. Create Premium accounts\n3. Create Savings accounts\n4. Display all accounts\n5. Quit" << std::endl;
+		std::cin >> userInput;
 
-	if (userInput == 1) {
-		
-		int amountOfAccounts;
-		
-		std::cout << "How many acounts would you like to create?  ";
-		std::cin.ignore();
-		std::cin >> amountOfAccounts;
-		
-		while (amountOfAccounts > 0) {
+		if (userInput == 1) {
 
-			Account* checkingAcount = new Checking;
+			int amountOfAccounts;
 
-			checkingAcount->setFirstName(firstNames[intRandomNumberGenerator(0, firstNames.size()-1)]);
-			
-			checkingAcount->setLastName(lastNames[intRandomNumberGenerator(0, lastNames.size()-1)]);
+			std::cout << "How many acounts would you like to create?  ";
+			std::cin.ignore();
+			std::cin >> amountOfAccounts;
 
-			checkingAcount->deposit(longRandomNumberGenerator(0, 10000000));
+			while (amountOfAccounts > 0) {
 
-			checkingAcount->display();
+				Account* checkingAcount = new Checking;
 
-			vectorOfAccounts.push_back(checkingAcount);
+				checkingAcount->setFirstName(firstNames[intRandomNumberGenerator(0, firstNames.size() - 1)]);
 
-			amountOfAccounts -= 1;
+				checkingAcount->setLastName(lastNames[intRandomNumberGenerator(0, lastNames.size() - 1)]);
+
+				checkingAcount->deposit(longRandomNumberGenerator(0, 10000000));
+
+				checkingAcount->display();
+
+				vectorOfAccounts.push_back(checkingAcount);
+
+				amountOfAccounts -= 1;
+			}
 		}
+		else if (userInput == 2) {
+
+		}
+
+		else if (userInput == 3) {
+
+		}
+
+		else if (userInput == 4) {
+			for (int i = 0; i < vectorOfAccounts.size(); i++) {
+				vectorOfAccounts[i]->display();
+			}
+		}
+
+		else {
+			std::cout << "Please select a number from the menue!" << std::endl;
+		}
+
 	}
 
 }
