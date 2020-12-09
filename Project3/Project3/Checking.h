@@ -8,7 +8,7 @@ public:
 	Checking();
 	Checking(std::string firstName, std::string lastName);
 	virtual void display() const override;
-	unsigned long long withdraw();
+	void withdraw(unsigned long long amount);
 
 private:
 	unsigned long long overdraw = 0;

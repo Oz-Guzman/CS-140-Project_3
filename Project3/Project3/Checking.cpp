@@ -17,6 +17,21 @@ void Checking::display() const{
 	std::cout << "Overdrawn: " << this->overdraw << std::endl;
 }
 
-unsigned long long Checking::withdraw() {
-	return(0);
+void Checking::withdraw(unsigned long long amount) {
+	
+	if (Account::balance <= amount) {
+		this->overdraw += 1;
+		if (overdraw > 3) {
+			Account::balance -= 30;
+		}
+		else {
+			Account::balance -= 10;
+		}
+
+	}
+	else {
+		Account::balance -= amount;
+	}
+	
+
 }
