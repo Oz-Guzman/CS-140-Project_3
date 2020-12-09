@@ -9,6 +9,7 @@ int main() {
 	int userInput;
 
 	std::vector<std::string> firstNames;
+	firstNames.push_back("Luke");
 	firstNames.push_back("Juliet");
 	firstNames.push_back("George");
 	firstNames.push_back("Bob");
@@ -18,6 +19,15 @@ int main() {
 	firstNames.push_back("Donald");
 
 	std::vector<std::string> lastNames;
+	lastNames.push_back("Wu");
+	lastNames.push_back("Goldsworthy");
+	lastNames.push_back("Philbrick");
+	lastNames.push_back("Kagan");
+	lastNames.push_back("Skywalker");
+	lastNames.push_back("Meacham");
+	lastNames.push_back("Fagles");
+	lastNames.push_back("Trump");
+
 
 	
 	std::cout << "Menu:\n1. Create Checking accounts\n2. Create Premium accounts\n3. Create Savings accounts\n4. Display all accounts\n5. Quit" << std::endl;
